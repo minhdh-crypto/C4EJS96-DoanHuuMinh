@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Bài 1\n\n")
+        console.log("a) A variable declaration introduces a new identifier.");
+        console.log("b) var: Scope essentially means where these variables are available for use. var declarations are globally scoped or function/locally scoped. It is globally scoped when a var variable is declared outside a function");
+        console.log('let: Just like var,  a variable declared with let can be updated within its scope. Unlike var, a let variable cannot be re-declared within its scope');
+        console.log("c) const: Variables declared with the const maintain constant values. const declarations share some similarities with let declarations. and const cannot be updated or re-declared");
+        console, log("d) cách dùng : Không dùng var trong bất kì mọi trường hợp");
+        console.log("Thay vào đó thì dùng let");
+        console.log("Dùng const khi cần định nghĩa một hằng số");
+
+        console.log("\nbài 2\n\n")
+        console.log("1. Boolean là loại dữ liệu logic chỉ có giá trị true hoặc false.");
+        console.log("2. Kết quả trả về là true hoặc false");
+
+        console.log("\nBài 3\n\n")
+        console.log("a.");
+        for (let i = 0; i < 7; i++) {
+            console.log(i);
+        }
+
+        console.log("b.");
+        let n = prompt("n?");
+        for (let i = 0; i < n; i++) {
+            console.log(i);
+        }
+
+        console.log("c.");
+        let n = prompt("n?");
+        for (let i = 3; i < n; i++) {
+            console.log(i);
+        }
+
+        console.log("d.");
+        let n = prompt("n=?");
+        let c = prompt("c=?");
+        for (let i = c; i < n; i++) {
+            console.log(i);
+        }
+
+        console.log("e.");
+        let n = prompt("n?");
+        let c = prompt("c?");
+        for (let i = c; i < n; i += 3) {
+            console.log(i);
+        }
+
+        console.log("f.");
+        let n = prompt("n?");
+        let s = prompt("s?");
+        let c = prompt("c?");
+        for (let i = c; i < n; i += s) {
+            console.log(i);
+        }
+        console.log("\n Bài 4\n\n")
+        const x = prompt("x?");
+        function factorial(x) {
+            if (x === 0) {
+                return 1;
+            }
+            return x * factorial(x - 1);
+        }
+        console.log(factorial(x));
+        console.log("\n Bài 5\n\n")
+        var age = prompt("How old are you?");
+        if (age >= 14) {
+            console.log("You are old enough to enter!");
+        } else {
+            console.log("You can't enter :)");
+        }
+        console.log("\n Bài 6\n\n")
+        let x = prompt("number=?");
+        if (x < 9 / 2 && x >= 0) {
+            alert("Lower half of 9");
+        } else {
+            alert("Higher half of 9");
+        }
+        console.log("\n Bài 7\n\n")
+        let n = prompt("n? ");
+        let x = prompt("x?");
+        if (x < n / 2 && x > 0) {
+            alert(`${x} is in lower half of ${n}`);
+        } else {
+            alert(`${x} is in higher half of ${n}`);
+        }
+        console.log("\n Bài 8\n\n")
+        let x = prompt("x = ");
+        if (x % 2 == 0) {
+            alert(`${x} is an even number`);
+        } else {
+            alert(`${x} is an odd number`);
+        }
+        console.log("\n Bài 9\n\n")
+        console.log('a)');
+        for (let i = 0; i < 3; i++) {
+            console.log('H')
+        }
+        for (let i = 0; i < 3; i++) {
+            console.log('L')
+        }
+
+        console.log('b)');
+        let x = prompt("Enter the total number of L's and H's?");
+        let y=console.log(x/2)
+        for (let i = 0; i <=x; i++) {
+            console.log('H')
+        }
+        if(i<=y){
+            console.log(L)
+        }else if(i>=y){
+            console.log(H)
+        }
+
+        console.log('c)');
+        for (let i = 0; i < 4; i++) {
+            console.log('0')
+            console.log('1')
+        }
+
+        console.log("\n Bài 10\n\n")
+        let mass = prompt("weight=?")
+        let height = prompt("height=?")
+        let bmi = mass / (height * height)
+        alert(bmi)
+        if (bmi < 16) {
+            alert("You are Severely")
+        }
+        else if (16 <= bmi && bmi <= 18.5) {
+            alert("You are Underweight")
+        }
+        else if (18.5 <= bmi && bmi <= 25) {
+            alert("You are Normal")
+        }
+        else if (25 <= bmi && bmi <= 30) {
+            alert("You are Overweight")
+        }
+        else alert("You are Obese")
+        console.log("\nBài 11\n\n")
+        console.log("a.");
+        for (var i = 1; i <= 4; i++) {
+            fd(50);
+            lt(90);
+        }
+        console.log("b.");
+        for (var i = 1; i <= 3; i++) {
+            fd(200);
+            rt(120);
+        }
+        console.log("c.");
+        for (var i = 1; i <= 5; i++) {
+            fd(200);
+            rt(72);
+        }
+        console.log("d.");
+        for (var i = 1; i <= 6; i++) {
+            fd(200);
+            rt(60);
+        }
+        console.log("\nBài 12\n\n")
+        let x = prompt('Enter number of edges')
+        if (x = 3) {
+            function triangle() {
+                for (var i = 1; i <= 3; i++) {
+                    fd(50)
+                    rt(120)
+                }
+            }
+            triangle()
+        }
+        if (x = 8) {
+            function octagonal() {
+                for (var i = 1; i <= 8; i++) {
+                    fd(50)
+                    rt(45)
+                }
+            }
+            octagonal()
+        }
+        if (x = 999) {
+            function circle() {
+                for (var i = 1; i <= 366; i++) {
+                    fd(1)
+                    rt(1)
+                }
+            }
+            circle()
+        }
+        console.log("\n Bài 13\n\n")
+        let x = prompt("How many polygons?");
+        function polygons() {
+            for (let i = 1; i <= x; i++) {
+                for (let j = 1; j <= i + 2; j++) {
+                    fd(100);
+                    rt(360 / (i + 2));
+                }
+            }
+        }
+        polygons();
+    </script>
+    </body>
